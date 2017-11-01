@@ -58,16 +58,16 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]@\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}@:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@: \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -122,13 +122,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 
 
 # System Path
-
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-alias config='/usr/bin/git --git-dir=/home/thales/.cfg/'\
-' --work-tree=/home/thales'
 
 
 # Open the terminal at the desired position
@@ -137,3 +133,9 @@ source virtualenvwrapper.sh
 
 # Make neovim standard editor
 export EDITOR=nvim
+
+# Faster commits with git
+function gitzap() {
+  git add . && git commit -m "save" && git push
+}
+
