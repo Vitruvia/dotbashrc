@@ -118,7 +118,6 @@ if ! shopt -oq posix; then
   fi
 fi
 export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
 
 
 # System Path
@@ -139,3 +138,5 @@ function gitzap() {
   git add . && git commit -m "save" && git push
 }
 
+#Add script folder to path
+export PATH="$HOME/scripts:$PATH"

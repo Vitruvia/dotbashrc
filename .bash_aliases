@@ -11,5 +11,8 @@ alias videogame='cd ~/Documents/Writing/videogame'
 #Nvim aliases
 alias vimrc='nvim ~/.vim/.vimrc'
 
+# Folder for writing
+alias writing='cd $HOME/Documents/Writing'
+
 
 
