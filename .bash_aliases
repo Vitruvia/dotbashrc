@@ -14,5 +14,8 @@ alias vimrc='nvim ~/.vim/.vimrc'
 # Folder for writing
 alias writing='cd $HOME/Documents/Writing'
 
-
+#Shortcut + window size on windows
+if [[ "$OSTYPE" == "msys" ]]; then
+    alias nvim='nvim-qt --geometry 1400x900'
+fi
 
