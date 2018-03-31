@@ -133,10 +133,18 @@ source virtualenvwrapper.sh
 # Make neovim standard editor
 export EDITOR=nvim
 
+
 # Faster commits with git
 function gitzap() {
   git add . && git commit -m "save" && git push
 }
 
-#Add script folder to path
+#Add folders to path
 export PATH="$HOME/scripts:$PATH"
+export PATH="$HOME/modules:$PATH"
+
+
+# Autocompletion on exercism
+if [ -f ~/.config/exercism/exercism_completion.bash ]; then
+  . ~/.config/exercism/exercism_completion.bash
+fi
