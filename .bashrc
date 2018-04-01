@@ -139,12 +139,9 @@ function gitzap() {
   git add . && git commit -m "save" && git push
 }
 
-#Add folders to path
+# Add folders to PATH 
 export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/modules:$PATH"
 
-
-# Autocompletion on exercism
-if [ -f ~/.config/exercism/exercism_completion.bash ]; then
-  . ~/.config/exercism/exercism_completion.bash
-fi
+# Add folders to PYTHONPATH
+export PYTHONPATH="${PYTHONPATH}:~/mymodules/"
