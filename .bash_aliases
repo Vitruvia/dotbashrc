@@ -1,4 +1,4 @@
-# Github aliases
+#Github aliases
 alias config='/usr/bin/git --git-dir=/home/thales/.cfg/'\
 ' --work-tree=/home/thales'
 alias dotvimrc='/usr/bin/git --git-dir=/home/thales/.vim/.git'\
@@ -11,8 +11,11 @@ alias videogame='cd ~/Documents/Writing/videogame'
 #Nvim aliases
 alias vimrc='nvim ~/.vim/.vimrc'
 
-# Folder for writing
+#Folder for writing
 alias writing='cd $HOME/Documents/Writing'
+
+#Folder for exercism
+alias exercise='cd $HOME/Documents/exercism'
 
 #Shortcut + window size on windows
 if [[ "$OSTYPE" == "msys" ]]; then
