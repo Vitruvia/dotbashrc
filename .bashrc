@@ -146,8 +146,7 @@ export PATH="$HOME/modules:$PATH"
 export PYTHONPATH="${PYTHONPATH}:~/mymodules/"
 
 #Configure VirtualEnvWrapper
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
-    source /usr/local/bin/virtualenvwrapper.sh
-fi
+export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
 
