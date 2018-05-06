@@ -8,17 +8,27 @@ alias dotbashrc='/usr/bin/git --git-dir=/home/thales/dotbashrc/.git'
 #Folder aliases
 alias videogame='cd ~/Documents/Writing/videogame'
 
-#Nvim aliases
-alias vimrc='nvim ~/.vim/.vimrc'
 
-#Folder for writing
-alias writing='cd $HOME/Documents/Writing'
+#WSL only aliases
+if grep -q Microsoft /proc/version; then
+    #Vimrc config file
+    alias vimrc='vim ~/.vim/.vimrc'
 
-#Folder for exercism
-alias exercise='cd $HOME/Documents/exercism'
+#Native Linux only aliases
+else
+    #Nvim aliases
+    alias vimrc='nvim ~/.vim/.vimrc'
 
-#Shortcut + window size on windows
-if [[ "$OSTYPE" == "msys" ]]; then
-    alias nvim='nvim-qt --geometry 1400x900'
+    #Folder for writing
+    alias writing='cd $HOME/Documents/Writing'
+
+    #Folder for exercism
+    alias exercise='cd $HOME/Documents/exercism'
 fi
+    
+
+
+
+
+
 
