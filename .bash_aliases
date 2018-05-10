@@ -11,18 +11,22 @@ alias videogame='cd ~/Documents/Writing/videogame'
 
 #WSL only aliases
 if grep -q Microsoft /proc/version; then
-    #Vimrc config file
+    ##Vimrc config file
     alias vimrc='vim ~/.vim/.vimrc'
+    ##Exercism
+    alias exercise='cd /mnt/d/exercism'
+    ##Writing
+    alias writing='cd /mnt/d/Docs/Writing'
+    ##Windows commands
+    alias winstart='cmd.exe /C start'
 
 #Native Linux only aliases
 else
-    #Nvim aliases
+    ##Nvim aliases
     alias vimrc='nvim ~/.vim/.vimrc'
-
-    #Folder for writing
+    ##Folder for writing
     alias writing='cd $HOME/Documents/Writing'
-
-    #Folder for exercism
+    ##Folder for exercism
     alias exercise='cd $HOME/Documents/exercism'
 fi
     
